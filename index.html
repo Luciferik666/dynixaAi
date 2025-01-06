@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./style.css"
+      onerror="this.onerror=null; this.href='./fallback.css';"
+    />
+    <link
+      rel="stylesheet"
+      href="./mediaQuary.css"
+      onerror="this.onerror=null; this.href='./fallback.css';"
+    />
+    <title>DynixaAI Header</title>
+    <style>
+      @media (max-width: 1200px) {
+        .partners-section h3 {
+          margin-left: 200px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .partners-section h3 {
+          margin-left: 100px;
+        }
+        .features-section {
+          flex-wrap: wrap;
+        }
+        .feature {
+          width: 100%;
+        }
+        .features-section {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+        .services-section {
+          flex-wrap: wrap;
+        }
+        .service-card {
+          width: calc(50% - 20px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          /* flex-direction: column; */
+          align-items: flex-start;
+        }
+        .navbar ul {
+          flex-direction: column;
+          gap: 10px;
+          display: none;
+        }
+        .navbar.active ul {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .hamburger {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .hamburger div {
+          display: block;
+          width: 25px;
+          height: 3px;
+          background-color: black;
+        }
+        .partners-section h3 {
+          margin-left: 0;
+          text-align: center;
+        }
+        .features-section {
+          flex-wrap: wrap;
+        }
+        .feature {
+          width: 100%;
+        }
+        .insights-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .footer-section {
+          margin: 20px 0;
+          text-align: center;
+        }
+        .services-section {
+          flex-wrap: wrap;
+        }
+        /* .service-card {
+          width: calc(100% - 20px);
+        } */
+        /* .service-card:nth-child(4),
+        .service-card:nth-child(5) {
+          width: calc(50% - 20px);
+        } */
+        .industry-item {
+          width: calc(50% - 10px);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .header {
+          padding: 10px;
+        }
+        .navbar ul {
+          gap: 5px;
+        }
+        .cta-button {
+          padding: 5px 10px;
+          font-size: 0.8rem;
+        }
+        .main-banner {
+          margin-top: 60px;
+        }
+        .section h2 {
+          font-size: 1.5rem;
+        }
+        .industry-item {
+          width: calc(100% - 10px);
+        }
+        .partners-logos img {
+          max-width: 30%;
+        }
+        .services-section {
+          width: 100;
+        }
+        .service-card {
+          width: 400px;
+        }
+        .features-section {
+          flex-wrap: wrap;
+        }
+        .feature {
+          width: 100%;
+        }
+        .insights-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer-section {
+          margin: 10px 0;
+          text-align: center;
+        }
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .hamburger div {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: black;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <!-- =============================================navBar ====================================== -->
+    <header class="header" id="top">
+      <div class="logo">
+        <a href="#top">
+          <img src="./img/logo copy.png" alt="DynixaAI Logo" class="logo-img" />
+        </a>
+        <!-- <span>DynixaAI</span> -->
+      </div>
+      <nav class="navbar">
+        <ul class="menu">
+          <li>
+            <a href="#industries" class="nav-link">Industries</a>
+          </li>
+          <li>
+            <a href="#capabilities" class="nav-link">Capabilities</a>
+          </li>
+          <li>
+            <a href="#insight" class="nav-link">Insight</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link">About</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <a href="#" class="cta-button">Let's Talk</a>
+    </header>
+    <!-- ==============================carousel =============================================== -->
+    <main class="main-banner">
+      <img src="./img/home.jpg" alt="Home Banner" class="banner-img" />
+      <div class="banner-content">
+        <p>Think: AI-Driven Digital Evolution</p>
+        <h3 class="carouselHead">
+          Creating Successful Results through Engineering
+        </h3>
+      </div>
+    </main>
+
+    <!-- ============================================================= -->
+    <div id="industries" class="section">
+      <h2>
+        <span class="highlight">DynixaAI</span> is a solutions-driven
+        engineering powerhouse,
+        <span class="highlight">Create innovative products</span>, maximizing
+        investments, <span class="highlight">accelerating ROI</span>, Platforms
+        and empowering <span class="highlight">global leaders</span> to scale
+        swiftly and efficiently.
+      </h2>
+
+      <div class="industry-list">
+        <div class="industry-item">
+          <img src="./img/payment.jpg" alt="Payments" />
+          <div class="overlay">
+            <h3>Payments</h3>
+          </div>
+        </div>
+        <div class="industry-item">
+          <img src="./img/stock.jpg" alt="Capital Market" />
+          <div class="overlay">
+            <h3>Capital Market</h3>
+          </div>
+        </div>
+        <div class="industry-item">
+          <img src="./img/lending.jpeg" alt="Lending" />
+          <div class="overlay">
+            <h3>Lending</h3>
+          </div>
+        </div>
+        <div class="industry-item">
+          <img src="./img/planning.jpeg" alt="Manufacturing and B2B" />
+          <div class="overlay">
+            <h3>Manufacturing and B2B</h3>
+          </div>
+        </div>
+        <div class="industry-item">
+          <img src="./img/high_studies.jpeg" alt="Higher Education" />
+          <div class="overlay">
+            <h3>Higher Education & Public Sector</h3>
+          </div>
+        </div>
+        <div class="industry-item">
+          <img src="./img/bank.jpeg" alt="Bank and Insurance" />
+          <div class="overlay">
+            <h3>Bank & Insurance</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="partners-section">
+        <h3>Officially partnered with top AI industry leaders.</h3>
+        <div class="partners-logos">
+          <img src="./img/openai.png" alt="OpenAI" />
+          <img src="./img/gemini.png" alt="Gemini" />
+          <img src="./img/nvidia-logo.png" alt="NVIDIA" />
+          <img src="./img/meta-logo.png" alt="Meta" />
+          <img src="./img/anthropic-logo.png" alt="Anthropic" />
+        </div>
+      </div>
+    </div>
+    .
+    <!-- =========================Accelerate innovation with D=============================================================== -->
+
+    <div id="capabilities" class="section2">
+      <h2>
+        <span class="highlight">Accelerate</span> innovation
+        <span class="highlight">with</span> Digital Transformation Services.
+      </h2>
+      <div class="service-bg">
+        <div class="services-section">
+          <div class="service-card">
+            <h3>Full Stack</h3>
+            <p>Software Development</p>
+            <span>
+              We offer a complete suite for B2B and B2C app development with
+              pre-built frontend and backend frameworks.
+            </span>
+            <div class="arrow">→</div>
+          </div>
+          <div class="service-card">
+            <h3>Digital</h3>
+            <p>Product Engineering</p>
+            <span>
+              We support you from initial ideation and wireframe design to
+              product development, whether on the cloud or on-premises.
+            </span>
+            <div class="arrow">→</div>
+          </div>
+
+          <div class="service-card">
+            <h3>AI Agents</h3>
+            <p>& RAG</p>
+            <span>
+              We quickly integrate AI capabilities into your organization by
+              developing RAG and AI agents to optimize processes.
+            </span>
+            <div class="arrow">→</div>
+          </div>
+          <div class="service-card">
+            <h3>Platforms</h3>
+            <p>Integration Services</p>
+            <span>
+              We support you from initial ideation and wireframe design to
+              product development, whether on the cloud or on-premises.
+            </span>
+            <div class="arrow">→</div>
+          </div>
+          <div class="service-card">
+            <h3>Cloud Service</h3>
+            <span>
+              Cloud services offer scalable, on-demand access to computing
+              resources, storage, and applications, enabling businesses.
+            </span>
+            <div class="arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===========================pppppppppppppppppppp========================================= -->
+    <div class="hero-section">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="stats-section">
+          <div class="stat">
+            <h2>20+</h2>
+            <p>Years of Service Excellence</p>
+          </div>
+          <div class="stat">
+            <h2>100%</h2>
+            <p>Reference-able Customer</p>
+          </div>
+          <div class="stat">
+            <h2>99%</h2>
+            <p>Customer Retention</p>
+          </div>
+          <div class="stat">
+            <h2>2500+</h2>
+            <p>Digital Across Other Countries</p>
+          </div>
+        </div>
+        <h3 class="section-heading">
+          Top reasons why global companies choose
+          <span class="highlight">DynixaAI</span>
+        </h3>
+        <div class="features-section">
+          <div class="feature">
+            <img src="./img/icon1.png" alt="Icon 1" />
+            <p>Innovative AI Solutions</p>
+            <p>Cutting-edge tech solving complex business challenges.</p>
+          </div>
+          <div class="feature">
+            <img src="./img/icon2.png" alt="Icon 2" />
+            <h4>Scalability</h4>
+            <p>Seamless solutions that grow with your business needs.</p>
+          </div>
+          <div class="feature">
+            <img src="./img/icon3.png" alt="Icon 3" />
+            <h4>Global Expertise</h4>
+            <p>Proven success across industries worldwide.</p>
+          </div>
+          <div class="feature">
+            <img src="./img/icon4.png" alt="Icon 4" />
+            <h4>Customizable Services</h4>
+            <p>Tailored strategies to match unique business goals.</p>
+          </div>
+          <div class="feature">
+            <img src="./img/icon5.png" alt="Icon 5" />
+            <h4>Accelerated ROI</h4>
+            <p>Drive faster results and maximize returns on investments.</p>
+          </div>
+          <div class="feature">
+            <img src="./img/icon6.png" alt="Icon 6" />
+            <h4>Trusted Partner</h4>
+            <p>Reliable, secure, and committed to excellence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =============insite section===================================================================== -->
+    <div id="insight" class="insights-section">
+      <h2 class="section-title">Insights</h2>
+      <div class="insights-grid">
+        <div class="insight-card">
+          <div class="insight-overlay">
+            <h4>Events</h4>
+            <p>Latest News & Update</p>
+          </div>
+          <img src="./img/event-image.jpg" alt="Events" />
+        </div>
+        <div class="insight-card">
+          <div class="insight-overlay">
+            <h4>Success stories</h4>
+            <p>
+              Driving massive cost savings for a global investment management
+              firm
+            </p>
+          </div>
+          <img src="./img/success-stories.jpg" alt="Success Stories" />
+        </div>
+        <div class="insight-card">
+          <div class="insight-overlay">
+            <h4>Blog page</h4>
+            <p>
+              Your source for insightful articles, inspiring stories, and expert
+              tips
+            </p>
+          </div>
+          <img src="./img/blog-page.jpg" alt="Blog Page" />
+        </div>
+        <div class="insight-card">
+          <div class="insight-overlay">
+            <h4>Resource</h4>
+            <p>Dynixa AI Platform</p>
+          </div>
+          <img src="./img/backround.jpg" alt="Resource" />
+        </div>
+        <div class="insight-card">
+          <div class="insight-overlay">
+            <h4>Dialogues</h4>
+            <p>Dialogues with Visionary Minds</p>
+          </div>
+          <img src="./img/dialogues-image.jpg" alt="Dialogues" />
+        </div>
+        <div class="insight-card">
+          <div class="insight-overlay">
+            <h4>Website Optimization</h4>
+            <p>
+              Boost speed, usability, and SEO for a better website experience
+            </p>
+          </div>
+          <img
+            src="./img/website-optimization.jpg"
+            alt="Website Optimization"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ===================================footer======================================================== -->
+    <div id="about" class="footer">
+      <div class="footer-container" style="text-align: left">
+        <div class="footer-section">
+          <h2 class="footer-logo">DynixaAI</h2>
+          <p><span class="location-icon">📍</span> USA Address :</p>
+          <p><span class="location-icon">📍</span> India Address :</p>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li><strong>Industries</strong></li>
+            <li>Payments</li>
+            <li>Capital Markets</li>
+            <li>Lending</li>
+            <li>Manufacturing and B2B</li>
+            <li>Higher Education and Public Sector</li>
+            <li>Banking and Insurance</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul class="about-section">
+            <li><strong>About</strong></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul>
+            <li><strong>Insights</strong></li>
+            <li><a href="#">News & Events</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <a href="#"
+            ><img src="./img/linkedin.png" alt="LinkedIn" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="./img/facebook.png" alt="Facebook" class="social-icon"
+          /></a>
+          <a href="#"
+            ><img src="./img/twitter.png" alt="Twitter" class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        document.querySelector(".navbar").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
